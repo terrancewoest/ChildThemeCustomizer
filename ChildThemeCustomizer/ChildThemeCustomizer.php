@@ -29,17 +29,18 @@ class ChildThemeCustomizer {
 	}
 
 	/**
-	 * Creates the class
+	 * Creates the class and calls the custom filters and hooks.
 	 */
 	private function __construct()
 	{
-		// Add your custom hooks and filters here.
+	/* Add your custom hooks and filters here.*/
+		//
 
-		// Add's the custom CSS and JavaScript to the front end of the theme.
+	/* Add's the custom CSS and JavaScript to the front end of the theme.*/
 		add_action('wp_enqueue_scripts', array($this, 'addCustomScripts'));
 
-		// Optionally add custom CSS and JavaScript to the backend as well.
-		add_action('admin_enqueue_scripts', array($this, 'addCustomAdminScripts'));
+	/* Optionally add custom CSS and JavaScript to the backend as well. */
+		// add_action('admin_enqueue_scripts', array($this, 'addCustomAdminScripts'));
 	}
 
 	/**
@@ -57,8 +58,8 @@ class ChildThemeCustomizer {
 	 */
 	public function addCustomAdminScripts()
 	{
-		// Enqueue Admin Files Here
-
+	/* Enqueue your own Admin Files Here */
+		//
 	}
 
 }
